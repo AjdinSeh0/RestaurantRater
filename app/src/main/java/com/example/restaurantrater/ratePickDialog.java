@@ -64,6 +64,7 @@ public class ratePickDialog extends DialogFragment {
                 db.close();
             }
             catch (Exception e){
+                Toast.makeText(getContext(), "SOMETHING WENT WRONG", Toast.LENGTH_SHORT).show();
                 Log.d("DATABSE ERROR", "SOMETHING WENT WRONG");
             }
 

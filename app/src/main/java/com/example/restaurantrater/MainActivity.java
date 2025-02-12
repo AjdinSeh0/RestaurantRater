@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
-    long restaurantID = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-
     private void initSaveButton() {
         Button saveButton = findViewById(R.id.buttonSave);
         EditText nameInput = findViewById(R.id.editTextText);
@@ -62,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 String zip = zipInput.getText().toString().trim();
 
                 if (name.isEmpty() || street.isEmpty() || city.isEmpty() || state.isEmpty() || zip.isEmpty()) {
+                    Toast.makeText(this, "SOMETHING WENT WRONG", Toast.LENGTH_SHORT).show();
                     Log.d("DATABASE ERROR", "Empty fields detected!");
                     return;
                 }
@@ -82,9 +81,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (insertedId == -1) {
                     Log.d("DATABASE ERROR", "Failed to insert restaurant!");
+                    Toast.makeText(this, "SOMETHING WENT WRONG", Toast.LENGTH_LONG).show();
                 } else {
                     RestaurantDBHelper.setLastInsertedRestaurantID(insertedId); // Store last ID statically
                     Log.d("DATABASE SUCCESS", "Restaurant inserted with ID: " + insertedId);
+                    Toast.makeText(this, "SUCCESSFULLY Stored Data", Toast.LENGTH_LONG).show();
                 }
 
             } catch (Exception e) {
