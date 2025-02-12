@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/dish_name"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Enter Dish Name"
+        android:inputType="text"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/type"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editTextText7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/entree_appetizer_desert"
+        android:inputType="text"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textDishRate"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Dish Rating"
+        android:text="@string/dish_rating"
         android:textAlignment="center" />
 
     <RatingBar
@@ -18,5 +55,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:numStars="5" />
+
+    <Button
+        android:id="@+id/buttonSaveDish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/save" />
 
 </LinearLayout>

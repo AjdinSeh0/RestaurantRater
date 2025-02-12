@@ -1,5 +1,6 @@
 package com.example.restaurantrater;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -9,6 +10,16 @@ public class RestaurantDBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "restaurant.db";
     private static final int DATABASE_VERSION = 1;
+
+    private static long lastInsertedRestaurantID = -1;
+
+    public static long getLastInsertedRestaurantID() {
+        return lastInsertedRestaurantID;
+    }
+
+    public static void setLastInsertedRestaurantID(long lastInsertedRestaurantID) {
+        RestaurantDBHelper.lastInsertedRestaurantID = lastInsertedRestaurantID;
+    }
 
     private static final String CREATE_TABLE_RESTAURANT =
             "CREATE TABLE Restaurant (" +
@@ -25,7 +36,7 @@ public class RestaurantDBHelper extends SQLiteOpenHelper {
                     "DishID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "Name TEXT NOT NULL, " +
                     "Type TEXT NOT NULL, " +
-                    "Rating INTEGER CHECK(Rating BETWEEN 1 AND 5), " +
+                    "Rating REAL NOT NULL, " +
                     "RestaurantID INTEGER, " +
                     "FOREIGN KEY (RestaurantID) REFERENCES Restaurant(RestaurantID) ON DELETE CASCADE" +
                     ");";
@@ -33,6 +44,9 @@ public class RestaurantDBHelper extends SQLiteOpenHelper {
             public RestaurantDBHelper(Context context){
                 super(context, DATABASE_NAME, null, DATABASE_VERSION);
             }
+
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="Restaurant Name"
+        android:text="@string/restaurant_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,10 +24,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter Restaurant Name"
+        android:hint="@string/enter_restaurant_name"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRestName" />
+        app:layout_constraintTop_toBottomOf="@+id/textRestName"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView2"
@@ -35,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="Street Address"
+        android:text="@string/street_address"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
@@ -46,10 +47,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter Address"
+        android:hint="@string/enter_address"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView3"
@@ -57,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="City"
+        android:text="@string/city"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
@@ -68,10 +70,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter City"
+        android:hint="@string/enter_city"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView4"
@@ -79,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="State"
+        android:text="@string/state"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
 
@@ -90,10 +93,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter State"
+        android:hint="@string/enter_state"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView5"
@@ -101,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="Zip Code"
+        android:text="@string/zip_code"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
 
@@ -112,18 +116,29 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter Zip Code"
+        android:hint="@string/enter_zip_code"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonDishRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="16dp"
-        android:text="Button"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/dishrater"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDishRating"
         app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

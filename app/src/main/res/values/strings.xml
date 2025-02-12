@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">RestaurantRater</string>
+    <string name="dish_name">Dish Name</string>
+    <string name="name">Name</string>
+    <string name="type">Type</string>
+    <string name="entree_appetizer_desert">entree/appetizer/desert</string>
+    <string name="dish_rating">Dish Rating</string>
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="enter_restaurant_name">Enter Restaurant Name</string>
+    <string name="street_address">Street Address</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="city">City</string>
+    <string name="enter_city">Enter City</string>
+    <string name="state">State</string>
+    <string name="enter_state">Enter State</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="enter_zip_code">Enter Zip Code</string>
+    <string name="dishrater">DishRater</string>
+    <string name="save">Save</string>
 </resources>
